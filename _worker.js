@@ -25,7 +25,7 @@ let ChatID = "";
 let 临时中转域名 = [];
 let 临时中转域名接口 = "";
 let EndPS = "";
-let 协议类型 = atob(`\u0056\u006b\u0078\u0046\u0055\u0031\u004d\u003d`);
+let 协议类型 = atob("Vk1lc3M=");
 let FileName = "优选订阅生成器";
 let SUBUpdateTime = 6;
 let total = 99;
@@ -678,7 +678,7 @@ export default {
       获取代理IP = url.searchParams.get("proxyip") || "false";
 
       if (url.searchParams.has("alterid")) {
-        协议类型 = "VMess";
+        协议类型 = atob("Vk1lc3M=");
         额外ID = url.searchParams.get("alterid") || 额外ID;
         加密方式 = url.searchParams.get("security") || 加密方式;
       } else if (
@@ -838,7 +838,7 @@ export default {
         (noTLS == "true" &&
           协议类型 ==
             atob(`\u0056\u006b\u0078\u0046\u0055\u0031\u004d\u003d`)) ||
-        协议类型 == "VMess"
+        协议类型 == atob("Vk1lc3M=")
       ) {
         const newAddressesnotlsapi = await 整理优选列表(addressesnotlsapi);
         const newAddressesnotlscsv = await 整理测速结果("FALSE");
@@ -940,7 +940,7 @@ export default {
               }
             }
 
-            if (协议类型 == "VMess") {
+            if (协议类型 == atob("Vk1lc3M=")) {
               const vmessLink = `vmess://${utf8ToBase64(
                 `{"v":"2","ps":"${
                   addressid + EndPS
@@ -1071,7 +1071,7 @@ export default {
             sni = 伪装域名;
           }
 
-          if (协议类型 == "VMess") {
+          if (协议类型 == atob("Vk1lc3M=")) {
             const vmessLink = `vmess://${utf8ToBase64(
               `{"v":"2","ps":"${
                 addressid + 节点备注
